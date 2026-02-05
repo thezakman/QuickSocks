@@ -4,8 +4,6 @@
 
 <img src="src/main/resources/logo.png" alt="QuickSocks Logo" width="512"/>
 
-<br>
-
 ![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
 ![License](https://img.shields.io/badge/license-Apache%202.0-green.svg)
 ![Burp Suite](https://img.shields.io/badge/Burp%20Suite-2023.12.1+-orange.svg)
