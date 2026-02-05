@@ -14,6 +14,30 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Automated testing suite
 - Profile templates
 
+## [1.0.1] - 2026-02-05
+
+### Changed
+- Improved GitHub link with proper hover effect (no HTML artifacts)
+- Centralized version management in Constants.java
+- Better code organization and consistency
+
+### Fixed
+- Fixed GitHub link display issue in footer
+- Improved font rendering for clickable links
+- **Implemented automatic tab refocus workaround** - QuickSocks now automatically attempts to return to the extension tab after applying settings (works most of the time!)
+
+### Documentation
+- Added note about Montoya API tab-switching behavior
+- Documented automatic refocus workaround and its limitations
+- Updated README with logo display
+- Improved inline code documentation
+
+### Technical
+- Version now centralized in single location (Constants.java)
+- Removed duplicate @version tags from all classes
+- Added refocus callback mechanism using SwingUtilities
+- Improved code maintainability
+
 ## [1.0.0] - 2026-02-05
 
 ### Added
@@ -130,5 +154,6 @@ This is the first stable release of QuickSocks! 🎉
 2. Load in Burp Suite Extensions
 3. Start managing your proxies!
 
-[Unreleased]: https://github.com/thezakman/QuickSocks/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/thezakman/QuickSocks/compare/v1.0.1...HEAD
+[1.0.1]: https://github.com/thezakman/QuickSocks/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/thezakman/QuickSocks/releases/tag/v1.0.0

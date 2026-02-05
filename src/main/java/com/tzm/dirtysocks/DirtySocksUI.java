@@ -36,6 +36,35 @@ public class DirtySocksUI {
 
             api.userInterface().registerSuiteTab(EXTENSION_NAME, mainTab);
 
+            // Set up refocus callback to attempt returning to extension tab
+            // This is a workaround for the Montoya API's tab-switching behavior
+            proxyService.setRefocusCallback(() -> {
+                try {
+                    // Request focus on our tab component
+                    if (mainTab != null && mainTab.isDisplayable()) {
+                        mainTab.requestFocusInWindow();
+                        
+                        // Try to find and click our tab in the parent TabbedPane
+                        java.awt.Container parent = mainTab.getParent();
+                        while (parent != null) {
+                            if (parent instanceof javax.swing.JTabbedPane) {
+                                javax.swing.JTabbedPane tabbedPane = (javax.swing.JTabbedPane) parent;
+                                int index = tabbedPane.indexOfComponent(mainTab);
+                                if (index >= 0) {
+                                    tabbedPane.setSelectedIndex(index);
+                                    api.logging().logToOutput("QuickSocks: Refocused on extension tab");
+                                    break;
+                                }
+                            }
+                            parent = parent.getParent();
+                        }
+                    }
+                } catch (Exception e) {
+                    // Silently fail - this is a best-effort workaround
+                    api.logging().logToError("QuickSocks: Could not refocus tab - " + e.getMessage());
+                }
+            });
+
             api.logging().logToOutput(
                 Constants.FULL_NAME + " loaded successfully!\n" +
                 "Profiles loaded: " + profileManager.getProfiles().size()

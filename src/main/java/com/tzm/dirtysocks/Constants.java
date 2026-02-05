@@ -12,7 +12,7 @@ public final class Constants {
     public static final String EXTENSION_NAME = "QuickSocks";
     
     /** Extension version - SINGLE SOURCE OF TRUTH for version number */
-    public static final String VERSION = "1.0.0";
+    public static final String VERSION = "1.0.1";
     
     /** Full extension display name with version */
     public static final String FULL_NAME = EXTENSION_NAME + " v" + VERSION;
