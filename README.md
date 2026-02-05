@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<img src="src/main/resources/logo.png" alt="QuickSocks Logo" width="200"/>
+<img src="src/main/resources/logo.png" alt="QuickSocks Logo" width="512"/>
 
 <br><br>
 
