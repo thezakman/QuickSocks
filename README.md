@@ -2,9 +2,9 @@
 
 <div align="center">
 
-<img src="src/main/resources/logo.png" alt="QuickSocks Logo" width="100%"/>
+<img src="src/main/resources/logo.png" alt="QuickSocks Logo" width="512"/>
 
-<br><br>
+<br>
 
 ![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
 ![License](https://img.shields.io/badge/license-Apache%202.0-green.svg)
