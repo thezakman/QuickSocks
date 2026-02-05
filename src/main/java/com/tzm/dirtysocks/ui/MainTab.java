@@ -148,7 +148,7 @@ public class MainTab extends JPanel {
 
                 String marker = (String) t.getValueAt(r, 0);
                 if (!sel) {
-                    if ("*".equals(marker)) {
+                    if ("•".equals(marker)) {
                         comp.setBackground(new Color(46, 204, 113, 35));
                         comp.setForeground(GREEN);
                     } else {
